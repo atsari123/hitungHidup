@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hitung Usia</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container d-flex justify-content-center align-items-center vh-100">
+    <button id="mulaiBtn" class="btn btn-primary">Klik disini untuk mulai</button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="usiaModal" tabindex="-1" aria-labelledby="usiaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="usiaModalLabel">Hitung Usia</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="usiaForm">
+            <div id="stepNama" class="mb-3">
+              <label for="nama" class="form-label">Nama</label>
+              <input type="text" id="nama" class="form-control" required>
+            </div>
+            <div id="stepTanggal" class="mb-3" style="display: none;">
+              <label for="tanggal" class="form-label">Tanggal Lahir (1 - 31)</label>
+              <input type="number" id="tanggal" class="form-control" min="1" max="31" required>
+            </div>
+            <div id="stepBulan" class="mb-3" style="display: none;">
+              <label for="bulan" class="form-label">Bulan Lahir</label>
+              <select id="bulan" class="form-select" required>
+                <option value="">Pilih Bulan</option>
+                <option value="0">Januari</option>
+                <option value="1">Februari</option>
+                <option value="2">Maret</option>
+                <option value="3">April</option>
+                <option value="4">Mei</option>
+                <option value="5">Juni</option>
+                <option value="6">Juli</option>
+                <option value="7">Agustus</option>
+                <option value="8">September</option>
+                <option value="9">Oktober</option>
+                <option value="10">November</option>
+                <option value="11">Desember</option>
+              </select>
+            </div>
+            <div id="stepTahun" class="mb-3" style="display: none;">
+              <label for="tahun" class="form-label">Tahun Lahir</label>
+              <input type="number" id="tahun" class="form-control" required>
+            </div>
+            <button type="button" id="nextBtn" class="btn btn-primary">Selanjutnya</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="hitungUsia.js"></script>
+</body>
+</html>
